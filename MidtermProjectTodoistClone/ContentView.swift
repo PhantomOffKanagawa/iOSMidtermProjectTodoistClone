@@ -8,17 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingAddTask = false
+    @State private var dragOffset = CGSize.zero
+    @State private var isDragging = false
+    @State private var selectedDate = "28"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ZStack {
+                VStack(spacing: 0) {
+                    HeaderView()
+                    
+                    CalendarView(
+                        selectedDate: $selectedDate
+                    )
+                    
+                    TaskListView()
+                }
+                
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        AddButton(
+                            dragOffset: $dragOffset,
+                            isDragging: $isDragging,
+                            showingAddTask: $showingAddTask
+                        )
+                            .padding(.trailing, 18)
+                            .padding(.bottom, 21)
+                    }
+                }
+            }
+            .navigationBarHidden(true)
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ZStack {
+        ContentView()
+        Image("reference_design")
+            .resizable()
+            .opacity(0.1)
+            .ignoresSafeArea()
+    }
 }
