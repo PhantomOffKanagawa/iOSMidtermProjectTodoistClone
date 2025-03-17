@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
+        // Stack of color with icons and text on top
         ZStack {
             Color(red: 0.86, green: 0.32, blue: 0.32) // Todoist red
                 .edgesIgnoringSafeArea(.top)

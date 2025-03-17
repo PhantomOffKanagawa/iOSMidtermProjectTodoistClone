@@ -18,13 +18,16 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 VStack(spacing: 0) {
+                    // Header
                     HeaderView()
                     
+                    // Horizontal Calendar list
                     CalendarView(
                         selectedDate: $selectedDate,
                         moveDate: $moveDate
                     )
                     
+                    // Task List View
                     TaskListView(
                         selectedDate: $selectedDate,
                         moveDate: $moveDate
@@ -53,6 +56,7 @@ struct ContentView: View {
 #Preview {
     ZStack {
         ContentView()
+        // Reference Image overlayed in opacity
         Image("reference_design")
             .resizable()
             .opacity(0)

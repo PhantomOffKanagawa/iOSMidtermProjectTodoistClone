@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Struct for loading task from JSON
 struct Task: Codable {
     let title: String
     let category: String
@@ -15,6 +16,7 @@ struct Task: Codable {
     let progress: String?
 }
 
+// Struct for loading days from JSON
 struct Day: Identifiable, Codable, Hashable, Equatable {
     static func == (lhs: Day, rhs: Day) -> Bool {
         return lhs.id == rhs.id

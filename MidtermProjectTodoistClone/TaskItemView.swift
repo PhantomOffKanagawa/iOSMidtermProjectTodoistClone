@@ -16,6 +16,7 @@ struct TaskItemView: View {
     var showsChevron: Bool = false
     
     var body: some View {
+        // Task Item including dynamic elements
         VStack(spacing: 0) {
             HStack {
                 Circle()
@@ -84,17 +85,10 @@ struct TaskItemView: View {
                 }
             }
             .frame(height: 53)
-//            .overlay(
-//                Rectangle()
-//                    .frame(height: 1)
-//                    .foregroundColor(Color(UIColor.systemGray5))
-//                    .offset(y: 30)
-//            )
             
             Divider()
                 .padding(.top, 15)
         }
         .background(Color.white)
-//        .frame(height: 55)
     }
 }

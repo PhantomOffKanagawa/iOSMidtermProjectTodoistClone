@@ -44,6 +44,7 @@ struct AddButton: View {
                 .shadow(color: .gray.opacity(0.4), radius: 3, x: 0, y: 2)
                 .offset(dragOffset)
                 .gesture(
+                    // When dragging follow and then spring back
                     DragGesture()
                         .onChanged { gesture in
                             withAnimation(.spring()) {

@@ -11,6 +11,7 @@ struct SectionHeaderView: View {
     let title: String
     
     var body: some View {
+        // Text with spacing
         VStack(spacing: 0) {
             HStack {
                 Text(title)

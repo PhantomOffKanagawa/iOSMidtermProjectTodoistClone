@@ -6,6 +6,7 @@
 //
 import SwiftUI
 
+// Function to convert color string to color
 func colorFromString(_ colorString: String) -> Color? {
     let colorMapping: [String: Color] = [
         "red": .red,
@@ -25,6 +26,7 @@ struct TaskListView: View {
     @State private var days: [Day] = []
     @State private var currentlyVisibleID: String?
     
+    // Show the scroll content
     var body: some View {
         ScrollViewReaderContent(
             days: days,
@@ -36,6 +38,7 @@ struct TaskListView: View {
         .background(Color(UIColor.systemGroupedBackground))
     }
     
+    // Load tasks from JSON
     private func loadTasks() {
         guard let url = Bundle.main.url(forResource: "tasks", withExtension: "json") else { return }
         do {
@@ -58,25 +61,29 @@ struct ScrollViewReaderContent: View {
     
     @State var scrollPosition: Int?
     
+    // Scroll View Reader allows tracking of scroll
     var body: some View {
         ScrollViewReader { value in
             ScrollView {
                 DaysContentView(days: days, currentlyVisibleID: $currentlyVisibleID)
             }
+            // Scroll Position tracker
             .scrollPosition(id: $scrollPosition)
             .scrollTargetBehavior(.viewAligned)
+            // Scroll to clicked date
             .onChange(of: moveDate) { _, _ in
                 withAnimation {
                     value.scrollTo(Int(moveDate), anchor: .top)
                     moveDate = ""
                 }
             }
+            // Update the scroll selected date with scroll position
             .onChange(of: scrollPosition) {
-                print(scrollPosition ?? "Failed")
                 if let scrollPosition = scrollPosition {
                     selectedDate = String(scrollPosition)
                 }
             }
+            // On load switch to "today"
             .onAppear() {
                 loadTasks()
                 moveDate = "28"
@@ -91,6 +98,7 @@ struct DaysContentView: View {
     @Binding var currentlyVisibleID: String?
     
     var body: some View {
+        // Insert each day section with each task
         LazyVStack(spacing: 0) {
             ForEach(days, id: \.self) { day in
                     DayView(day: day, currentlyVisibleID: $currentlyVisibleID)

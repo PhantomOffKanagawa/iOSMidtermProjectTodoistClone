@@ -57,6 +57,7 @@ struct CalendarView: View {
                     let isSelected = date == selectedDate
                     let hasTask = taskOnDay[index]
                     
+                    // Individual date number stack
                     CalendarDateView(
                         date: date,
                         isSelected: isSelected,
@@ -116,10 +117,3 @@ struct CalendarDateView: View {
         }
     }
 }
-
-//// Preview provider
-//struct CalendarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CalendarView()
-//    }
-//}
