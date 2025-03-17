@@ -1,0 +1,133 @@
+[
+        {
+            "id": 26,
+            "title": "Sun Apr 26",
+            "tasks": []
+        },
+        {
+            "id": 27,
+            "title": "Mon Apr 27",
+            "tasks": []
+        },
+        {
+            "id": 28,
+            "title": "Today · Tue Apr 28",
+            "tasks": [
+                {
+                    "title": "Pay: Credit card",
+                    "category": "Personal",
+                    "categoryColor": "green",
+                    "hasRecurring": true
+                },
+                {
+                    "title": "Monthly Log story",
+                    "category": "MacStories",
+                    "categoryColor": "red",
+                    "hasRecurring": false
+                },
+                {
+                    "title": "Write: Arcade Highlights",
+                    "category": "MacStories",
+                    "categoryColor": "red",
+                    "hasRecurring": false,
+                    "progress": "3/4"
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "title": "Tomorrow · Wed Apr 29",
+            "tasks": [
+                {
+                    "title": "Trim: Nails",
+                    "category": "Personal",
+                    "categoryColor": "green",
+                    "hasRecurring": true
+                },
+                {
+                    "title": "Monthly Log",
+                    "category": "MacStories",
+                    "categoryColor": "red",
+                    "hasRecurring": true
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Thu Apr 30",
+            "tasks": [
+                {
+                    "title": "MacStories Weekly",
+                    "category": "MacStories",
+                    "categoryColor": "red",
+                    "hasRecurring": false,
+                    "progress": "0/2"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Fri May 1",
+            "tasks": []
+        },
+        {
+            "id": 2,
+            "title": "Sat May 2",
+            "tasks": []
+        },
+        {
+            "id": 3,
+            "title": "Sun May 3",
+            "tasks": [
+                {
+                    "title": "MacStories Check",
+                    "category": "MacStories",
+                    "categoryColor": "red",
+                    "hasRecurring": true,
+                    "progress": "0/2"
+                },
+                {
+                    "title": "Make T-Shirts",
+                    "category": "Personal",
+                    "categoryColor": "green",
+                    "hasRecurring": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Mon May 4",
+            "tasks": [
+                {
+                    "title": "Just Take Up Space",
+                    "category": "Dummy Tasks",
+                    "categoryColor": "blue",
+                    "hasRecurring": true
+                },
+                {
+                    "title": "Still More Space",
+                    "category": "Dummy Tasks",
+                    "categoryColor": "blue",
+                    "hasRecurring": true
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Tue May 5",
+            "tasks": [
+                {
+                    "title": "Just Take Up Space",
+                    "category": "Dummy Tasks",
+                    "categoryColor": "blue",
+                    "hasRecurring": true
+                },
+                {
+                    "title": "Still More Space",
+                    "category": "Dummy Tasks",
+                    "categoryColor": "blue",
+                    "hasRecurring": true
+                }
+            ]
+        }
+    ]

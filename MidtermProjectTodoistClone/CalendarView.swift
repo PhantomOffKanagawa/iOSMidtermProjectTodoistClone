@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import NotificationCenter
 
 struct CalendarView: View {
     @Binding var selectedDate: String
+    @Binding var moveDate: String
     
     // Pre-define constants to avoid recreating them on every render
     private let todoistRed = Color(red: 0.86, green: 0.32, blue: 0.32)
@@ -63,6 +65,7 @@ struct CalendarView: View {
                         onTap: {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 selectedDate = date
+                                moveDate = date
                             }
                         }
                     )

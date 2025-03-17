@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var dragOffset = CGSize.zero
     @State private var isDragging = false
     @State private var selectedDate = "28"
+    @State private var moveDate = ""
     
     var body: some View {
         NavigationView {
@@ -20,10 +21,14 @@ struct ContentView: View {
                     HeaderView()
                     
                     CalendarView(
-                        selectedDate: $selectedDate
+                        selectedDate: $selectedDate,
+                        moveDate: $moveDate
                     )
                     
-                    TaskListView()
+                    TaskListView(
+                        selectedDate: $selectedDate,
+                        moveDate: $moveDate
+                    )
                 }
                 
                 VStack {
@@ -50,7 +55,7 @@ struct ContentView: View {
         ContentView()
         Image("reference_design")
             .resizable()
-            .opacity(0.1)
+            .opacity(0)
             .ignoresSafeArea()
     }
 }
